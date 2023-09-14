@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>Escribe aquí tus objetivos</h2>
+<mat-dialog-content class="mat-typography">
+
+  <form class="example-form" [formGroup]="form" (submit)="submitForm()">
+    <mat-form-field class="example-full-width">
+      <mat-label>Leave a comment</mat-label>
+      <textarea matInput placeholder="Ex. It makes me feel..." formControlName="objetivo"></textarea>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Enviar</button>
+  </form>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+</mat-dialog-actions>
