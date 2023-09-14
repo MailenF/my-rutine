@@ -1,0 +1,22 @@
+.dashboard-page-container {
+  /*width: 100%;*/
+  /*height: 100%;*/
+}
+app-dashboard-page-web {
+  width: 100%;
+  height: 100%;
+}
+app-dashboar-page-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  app-dashboard-page-web  {
+    display: none
+  }
+  app-dashboar-page-mobile {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+}

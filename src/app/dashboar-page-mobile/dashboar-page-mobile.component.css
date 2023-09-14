@@ -1,0 +1,35 @@
+.dashboard-container {
+  width: 100%;
+  height: 100%;
+  margin-top: 60px;
+}
+.titulo {
+  margin-left: 20px;
+}
+button{
+  margin-left: 10px;
+}
+.right-side {
+  background-color: #080315;
+  margin: 10px;
+  border-radius: 10px;
+  padding-bottom: 10px;
+}
+.mis-rutinas {
+  margin-right: 10px;
+}
+h3 {
+  color: #0000008E;
+}
+.divider {
+  height: 4px;
+  width: 30px;
+  background-color: #9775fa;
+  margin-bottom: 40px
+}
+.crear-rutina {
+  display: block;
+}
+.crear-rutina button {
+  margin-top: 40px;
+}

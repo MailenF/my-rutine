@@ -1,0 +1,44 @@
+h3 {
+  color: #0000008E;
+}
+.divider {
+  height: 4px;
+  width: 30px;
+  background-color: #9775fa;
+  margin-bottom: 40px
+}
+.calendario {
+  margin-top: 100px;
+  margin-left: 10px;
+}
+.calendario h3, .objetivos h3 {
+  color: #0000008E;
+  margin-bottom: 16px;
+}
+
+mat-calendar{
+  box-shadow: 0px 0px 15px 0px rgba(146,91,247,1);
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+.objetivos {
+  margin-top: 50px;
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  mat-calendar{
+   background-color: #ffffff;
+  }
+  .calendario h3, .objetivos h3 {
+    color: #ffffff;
+  }
+
+  .calendario h3 {
+    padding-top: 10px;
+  }
+  .objetivos {
+    margin-right: 20px;
+  }
+}

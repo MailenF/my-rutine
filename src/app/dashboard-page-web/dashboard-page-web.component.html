@@ -1,0 +1,26 @@
+<div class="dashboard-container">
+  <div class="titulo">
+    <h3>Mis Rutinas</h3>
+    <div class="divider">
+    </div>
+  </div>
+
+   <div class="mis-rutinas">
+     <div class="container-card">
+      <app-card-rutina></app-card-rutina>
+     </div>
+   </div>
+
+  <div class="table-rutinas">
+    <div class="crear-rutina">
+      <button mat-raised-button color="primary" routerLink="/mis-rutinas">CREAR RUTINA</button>
+    </div>
+    <div class="container-table">
+      <app-tabla-rutina></app-tabla-rutina>
+    </div>
+  </div>
+
+  <div class="right-side">
+    <app-dashboard-right-side></app-dashboard-right-side>
+  </div>
+</div>
