@@ -1,0 +1,14 @@
+<div [formGroup]="form">
+
+  <div fxLayout="row" fxLayoutGap="16px" style="margin: 25px 0px 25px 50px">
+    <mat-form-field fxFlex="25">
+      <input matInput formControlName="serie" placeholder="Serie">
+    </mat-form-field>
+    <mat-form-field fxFlex="25">
+      <input matInput formControlName="repeticion" placeholder="Repeticiones">
+    </mat-form-field>
+      <button mat-mini-fab color="warn" (click)="clickDelete.emit(null)"><mat-icon>delete</mat-icon></button>
+
+  </div>
+
+</div>

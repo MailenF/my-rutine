@@ -1,0 +1,18 @@
+<div class="container-verified-page">
+  <div class="text-center">
+    <p>
+      Gracias por registrarte ! <br />
+      <span>
+        Hemos enviado un mail de verificación a <strong class="change-color"> {{user?.email}}</strong>
+      </span>
+    </p>
+    <p>
+      Por favor ingrese a su correo electrónico y haga click en el enlace para verificar su cuenta. Una vez verificada su cuenta recargue la pagina e inicie sesión. Muchas gracias !
+    </p>
+    <button
+      (click)="onResendEmail()"
+      class="inline-block py-3 uppercase bg-transparent rounded px-7 hover:text-blue-700 hover:bg-gray-100">
+      Reenviar
+    </button>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div [formGroup]="form">
+
+  <div fxLayout="row" fxLayoutGap="16px">
+    <mat-form-field class="input-field" fxFlex="30">
+      <input matInput formControlName="ejercicio" placeholder="Ejercicio">
+    </mat-form-field>
+    <div class="button-container">
+      <button class="button-add" mat-raised-button color="primary"  color="primary" type="button" (click)="clickAddSubRow()">Serie / rep</button>
+      <button class="button-delete" mat-mini-fab color="warn" type="button" (click)="clickDelete.emit(null)"><mat-icon>delete</mat-icon></button>
+    </div>
+  </div>
+
+  <ng-container *ngFor="let rowCtrl of asArrayOfFormGroup(formArray); let j = index;">
+    <app-ejercicios-form-sub-row [form]="rowCtrl" [index]="j" (clickDelete)="clickDeleteSubRow(j)"></app-ejercicios-form-sub-row>
+  </ng-container>
+
+</div>
