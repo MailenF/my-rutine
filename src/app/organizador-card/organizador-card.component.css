@@ -1,0 +1,54 @@
+mat-card {
+  width: 80%;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  min-width: 12vw;
+  margin-bottom: 20px;
+  box-shadow: 4px -2px 5px -1px rgba(0, 0, 0, 0.42);
+  border-left: 1px solid rgba(0, 0, 0, 0.24);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+}
+mat-card-subtitle {
+  display: flex;
+  align-items: center;
+}
+.color {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  margin-left: 10px
+}
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.example-margin {
+  margin: 0 10px;
+}
+button {
+  margin-left: 20px;
+}
+@media only screen and (max-width: 1000px) {
+  mat-card {
+    /*max-width: 110%; !* Asegura que el mat-card se extienda al ancho completo de su contenedor *!*/
+    height: 250px;
+    width: 90%;
+    margin-left: 10px;
+  }
+
+  .example-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+
+  mat-checkbox {
+    flex: 1; /* Permite que los mat-checkbox se ajusten en una fila */
+    max-width: calc(50% - 16px); /* Para que haya 2 columnas en pantallas pequeñas */
+    margin: 10px; /* Espacio entre los mat-checkbox */
+  }
+}

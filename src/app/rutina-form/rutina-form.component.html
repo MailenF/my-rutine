@@ -1,0 +1,33 @@
+<div class="container-form">
+<form [formGroup]="form" (submit)="submitForm()">
+  <div fxLayout="row" fxLayoutGap="32px">
+    <mat-form-field fxFlex>
+      <input matInput placeholder="Nombre de la Rutina" formControlName="nameRutina">
+    </mat-form-field>
+  </div>
+
+
+  <mat-form-field>
+    <mat-label>Color Asignado</mat-label>
+    <mat-select formControlName="color" required>
+      <mat-option>--</mat-option>
+      <mat-option *ngFor="let color of colors" [value]="color.value">
+        {{color.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+  <ng-container *ngFor="let ctrl of asFormArray(formRutina); let i = index;">
+    <app-ejercicios-form [form]="ctrl" [index]="i" (clickDelete)="clickDeleteSubRow(i)"></app-ejercicios-form>
+  </ng-container>
+
+  <div>
+    <button class="button-add" mat-raised-button color="warn" type="button" (click)="clickAddEjercicio()">AGREGAR EJERCICIO</button>
+  </div>
+
+  <div class="button-submit">
+  <button mat-raised-button color="primary" type="submit">Enviar</button>
+  </div>
+</form>
+</div>

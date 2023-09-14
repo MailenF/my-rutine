@@ -1,0 +1,23 @@
+<mat-card *ngFor="let rutina of rutinas, let i = index">
+  <mat-card-header>
+    <mat-card-title>Rutina: {{rutina.nameRutina}}</mat-card-title>
+    <mat-card-subtitle>
+      Color asignado:
+      <div class="color" [ngStyle]="{ 'background-color': rutina.color }"></div>
+    </mat-card-subtitle>
+    <mat-card-subtitle>
+      Fecha: {{rutina.date}}
+    </mat-card-subtitle>
+  </mat-card-header>
+  <section class="example-section">
+    <mat-checkbox  *ngFor="let day of days; let j = index"
+                   class="example-margin"
+                   [disabled]="isDayDisabled(i, j)"
+                   (change)="toggleDaySelection(i, j, rutina)"
+    >
+      Dia {{ j + 1 }}
+    </mat-checkbox>
+  </section>
+</mat-card>
+
+<button mat-raised-button color="primary" (click)="generatePDF()"> Descargar </button>
