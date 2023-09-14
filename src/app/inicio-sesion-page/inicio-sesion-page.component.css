@@ -1,0 +1,20 @@
+.surface-card{
+  box-shadow: 4px -4px 20px 0px rgba(151,117,250,1);
+}
+.change {
+  color: #9775fa;
+}
+form p {
+  margin-top: 14px;
+  margin-bottom: 14px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 600px) {
+  .container-login-page {
+    margin-left:10px;
+    margin-right: 10px;
+  }
+}

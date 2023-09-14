@@ -1,0 +1,19 @@
+<div class="home-mobile-container">
+  <mat-sidenav-container class="example-container" (backdropClick)="close()">
+    <mat-sidenav #sidenav (keydown.escape)="close()" disableClose>
+      <div (click)="close()" class="container-fa-x fa-lg">
+        <i class="fa-solid fa-x"></i>
+      </div>
+      <div class="sid-div1">
+        <app-sidenav (clicked)="close()"></app-sidenav>
+      </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="example-sidenav-content">
+      <div class="div1">
+        <i class="fa-solid fa-bars fa-2xl" (click)="sidenav.open()"></i>
+      </div>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

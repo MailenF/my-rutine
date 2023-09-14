@@ -1,0 +1,16 @@
+<div class="login">
+  <ng-container *ngIf="user$ | async as user; else showLinks">
+    <a>{{ emailPrefix }}</a>
+ <i class="fa-solid fa-gear" style="color: #ffffff;" [matMenuTriggerFor]="beforeMenu"></i>
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+      <button mat-menu-item routerLink="/inicio-sesion" (click)="onSignOut()">Cerrar Sesión</button>
+    </mat-menu>
+  </ng-container>
+  <ng-template #showLinks>
+    <button mat-button [matMenuTriggerFor]="beforeMenu"> <i class="fa-solid fa-gear fa-lg" style="color: #ffffff;"></i></button>
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+      <button mat-menu-item routerLink="/inicio-sesion">Iniciar Sesión</button>
+      <button mat-menu-item routerLink="/registro-sesion">Registrarse</button>
+    </mat-menu>
+  </ng-template>
+</div>
