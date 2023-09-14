@@ -1,0 +1,23 @@
+<div class="card-container">
+<ng-container *ngIf="show; else showCards">
+  <h2>Aún no tiene ninguna rutina</h2>
+</ng-container>
+<ng-template #showCards>
+  <mat-card *ngFor="let rutina of rutinas">
+    <mat-card-header>
+      <mat-card-title>Rutina: {{rutina.nameRutina}}</mat-card-title>
+      <mat-card-subtitle>
+        Color asignado:
+        <div class="color" [ngStyle]="{ 'background-color': rutina.color }"></div>
+      </mat-card-subtitle>
+      <mat-card-subtitle>
+        Fecha: {{rutina.date}}
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions align="start">
+      <button (click)="showRutina(rutina.id)" mat-button>VER</button>
+      <button mat-button (click)="deleteRutina(rutina)">ELIMINAR</button>
+    </mat-card-actions>
+  </mat-card>
+</ng-template>
+</div>

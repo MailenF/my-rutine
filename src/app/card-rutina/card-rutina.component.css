@@ -1,0 +1,26 @@
+.card-container{
+  display: flex;
+  /*align-items: center;*/
+  /*justify-content: center;*/
+  flex-wrap: wrap;
+}
+mat-card {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  min-width: 12vw;
+  margin-bottom: 20px;
+  box-shadow: 4px -2px 5px -1px rgba(0, 0, 0, 0.42);
+  border-left: 1px solid rgba(0, 0, 0, 0.24);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+}
+mat-card-subtitle {
+  display: flex;
+  align-items: center;
+}
+.color {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  margin-left: 10px
+}
