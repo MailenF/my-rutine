@@ -1,0 +1,21 @@
+<div class="tabla-rutina" >
+  <table *ngFor="let rutina of rutina" [style.backgroundColor]="rutina.color">
+    <caption>Rutina: {{ rutina.nameRutina }}</caption>
+    <thead>
+    <tr>
+      <th>Ejercicio</th>
+      <th>Series x Rep</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let ejercicio of rutina.rutina">
+      <td>{{ ejercicio.ejercicio }}</td>
+      <td>
+        <div class="series-rep" *ngFor="let serieRep of ejercicio.rowSubArray" [style.borderTop]="serieRep !== ejercicio.rowSubArray[0] ? '1px solid #ccc' : 'none'">
+          {{ serieRep.serie }} x {{ serieRep.repeticion }}
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

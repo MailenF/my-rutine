@@ -1,0 +1,24 @@
+<div class="container-toolbar">
+  <div class="logo">
+    <p class="logo">
+      <span class="cambiado">{{ primerasLetras }}</span>{{ restoTexto }}
+    </p>
+  </div>
+  <div class="options">
+    <a routerLink="">HOME</a>
+    <a routerLink="/services">SERVICES</a>
+    <a routerLink="/mis-rutinas">RUTINAS</a>
+  </div>
+  <div class="login">
+    <ng-container *ngIf="user$ | async as user; else showLinks">
+      <span class="user">{{user.email}}</span>
+      <a routerLink="/inicio-sesion" (click)="onSignOut()">Cerrar</a>
+    </ng-container>
+    <ng-template #showLinks>
+  <a routerLink="/inicio-sesion">Iniciar Sesión</a>
+      <span class="barra">/</span>
+      <a routerLink="/registro-sesion">Registrarse</a>
+    </ng-template>
+  </div>
+</div>
+
